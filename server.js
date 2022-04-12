@@ -23,6 +23,10 @@ app.get("/pokemon", (req, res) => {
     res.render("index.ejs", { allPokemon: pokemons })
 })
 
+app.get("/pokemon/:id", (req, res) => {
+    res.render("show.ejs", { pokemon: pokemons[req.params.id] })
+})
+
 app.listen("3000", () => {
     console.log("You are listening to PORT 3000")
 })

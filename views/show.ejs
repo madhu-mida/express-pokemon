@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head.ejs") %>
+
+    <body>
+        Name: <h3>
+            <%= pokemon.name %>
+        </h3><br />
+        <img src="<%= pokemon.img %>" alt="<%= pokemon.name %>"><br />
+        Type: <h4>
+            <%= pokemon.type %>
+        </h4>
+        Stats: <h4>
+            HP: <%= pokemon.stats.hp %><br />
+                Attack: <%= pokemon.stats.attack %><br />
+                    Defense: <%= pokemon.stats.defense %><br />
+        </h4>
+    </body>
+
+</html>

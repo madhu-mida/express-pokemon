@@ -5,18 +5,9 @@
 
     <body>
         <% allPokemon.forEach(function (element,index) { %>
-            <img src="<%= element.img %>" alt="<%= element.name %>"><br />
-            Name: <h3>
-                <%= element.name %>
-            </h3>
-            Type: <h4>
-                <%= element.type %>
-            </h4>
-            Stats: <h4>
-                HP: <%= element.stats.hp %><br />
-                    Attack: <%= element.stats.attack %><br />
-                        Defense: <%= element.stats.defense %><br />
-            </h4>
+            <a href="/pokemon/<%=index%>">
+                <img src="<%= element.img %>" alt="<%= element.name %>"><br />
+            </a>
             <% }) %>
     </body>
 
