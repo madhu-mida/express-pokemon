@@ -19,12 +19,24 @@ app.get("/", (req, res) => {
     res.send("Server is working")
 })
 
+// Index
 app.get("/pokemon", (req, res) => {
     res.render("index.ejs", { allPokemon: pokemons })
 })
 
+// New
+app.get("/pokemon/new", (req, res) => {
+    res.render("new.ejs")
+})
+
+// Show
 app.get("/pokemon/:id", (req, res) => {
     res.render("show.ejs", { pokemon: pokemons[req.params.id] })
+})
+
+// Edit
+app.get("/pokemon/:id/edit", (req, res) => {
+    res.render("edit.ejs", { pokemon: pokemons[req.params.id] })
 })
 
 app.listen("3000", () => {
