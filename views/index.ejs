@@ -12,6 +12,12 @@
                 <a href="/pokemon/<%=index%>">
                     <img src="<%= element.img %>" alt="<%= element.name %>"><br />
                 </a>
+                <form action="/pokemon/<%=index%>/edit">
+                    <input type="submit" value="Edit">
+                </form>
+                <form action="/pokemon/<%=index%>?_method=DELETE" method="post">
+                    <input type="submit" value="Delete">
+                </form>
                 <% }) %>
         </div>
 
