@@ -9,6 +9,8 @@
         <form action="/pokemon/<%=index%>?_method=PUT" method="post">
             Name: <input type="text" name="name" value="<%=pokemon.name%>"><br />
             ImageURL: <input type="text" name="image" value="<%=pokemon.img%>"><br />
+            Type: <input type="text" name="type" value="<%=pokemon.type.join(" ,")%>">
+            <i>Enter multiple types separated by ","</i><br />
             Stats:
             <div>
                 HP: <input type="text" name="hp" value="<%=pokemon.stats.hp%>"><br />

@@ -43,6 +43,7 @@ app.get("/pokemon/:id/edit", (req, res) => {
 // Create
 app.post("/pokemon", (req, res) => {
     console.log(req.body)
+    req.body.type = (req.body.type).split(",")
     pokemons.push(req.body)
     console.log(pokemons[(pokemons.length) - 1])
     res.redirect("/pokemon")
@@ -52,6 +53,7 @@ app.post("/pokemon", (req, res) => {
 app.put("/pokemon/:id", (req, res) => {
     pokemons[req.params.id].name = req.body.name
     pokemons[req.params.id].img = req.body.image
+    pokemons[req.params.id].type = (req.body.type).split(",")
     pokemons[req.params.id].stats.hp = req.body.hp
     pokemons[req.params.id].stats.attack = req.body.attack
     pokemons[req.params.id].stats.defense = req.body.defense
