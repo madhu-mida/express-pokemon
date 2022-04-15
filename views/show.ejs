@@ -16,6 +16,14 @@
                 Attack: <%= pokemon.stats.attack %><br />
                     Defense: <%= pokemon.stats.defense %><br />
         </h4>
+
+        <form action="/pokemon/<%=index%>/edit">
+            <input type="submit" value="Edit">
+        </form>
+
+        <div>
+            <a href="/pokemon">Back To Index Page</a>
+        </div>
     </body>
 
 </html>

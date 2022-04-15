@@ -31,12 +31,32 @@ app.get("/pokemon/new", (req, res) => {
 
 // Show
 app.get("/pokemon/:id", (req, res) => {
-    res.render("show.ejs", { pokemon: pokemons[req.params.id] })
+    console.log(pokemons[req.params.id])
+    res.render("show.ejs", { pokemon: pokemons[req.params.id], index: req.params.id })
 })
 
 // Edit
 app.get("/pokemon/:id/edit", (req, res) => {
-    res.render("edit.ejs", { pokemon: pokemons[req.params.id] })
+    res.render("edit.ejs", { pokemon: pokemons[req.params.id], index: req.params.id })
+})
+
+// Create
+app.post("/pokemon", (req, res) => {
+    console.log(req.body)
+    pokemons.push(req.body)
+    console.log(pokemons[(pokemons.length) - 1])
+    res.redirect("/pokemon")
+})
+
+// Update
+app.put("/pokemon/:id", (req, res) => {
+    pokemons[req.params.id].name = req.body.name
+    pokemons[req.params.id].img = req.body.image
+    pokemons[req.params.id].stats.hp = req.body.hp
+    pokemons[req.params.id].stats.attack = req.body.attack
+    pokemons[req.params.id].stats.defense = req.body.defense
+    console.log(pokemons[req.params.id])
+    res.redirect("/pokemon")
 })
 
 app.listen("3000", () => {

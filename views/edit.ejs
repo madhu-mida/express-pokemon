@@ -6,7 +6,7 @@
         <h1>
             <%=pokemon.name%>
         </h1>
-        <form>
+        <form action="/pokemon/<%=index%>?_method=PUT" method="post">
             Name: <input type="text" name="name" value="<%=pokemon.name%>"><br />
             ImageURL: <input type="text" name="image" value="<%=pokemon.img%>"><br />
             Stats:

@@ -4,11 +4,17 @@
 <%- include("partials/head.ejs") %>
 
     <body>
-        <% allPokemon.forEach(function (element,index) { %>
-            <a href="/pokemon/<%=index%>">
-                <img src="<%= element.img %>" alt="<%= element.name %>"><br />
-            </a>
-            <% }) %>
+        <div>
+            <a href="/pokemon/new">Create a New Pokemon</a>
+        </div>
+        <div>
+            <% allPokemon.forEach(function (element,index) { %>
+                <a href="/pokemon/<%=index%>">
+                    <img src="<%= element.img %>" alt="<%= element.name %>"><br />
+                </a>
+                <% }) %>
+        </div>
+
     </body>
 
 </html>
