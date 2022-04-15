@@ -1,0 +1,15 @@
+.navbar {
+    background-color: rgb(214, 235, 183);
+}
+
+.title-header {
+    font-size: 50px;
+    font-family: 'Supermercado One', cursive;
+
+}
+
+.add-pokemon {
+    float:right;
+    font-size: 40px;
+    font-family: 'Supermercado One', cursive;
+}
