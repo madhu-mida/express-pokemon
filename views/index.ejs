@@ -3,23 +3,93 @@
 
 <%- include("partials/head.ejs") %>
 
-    <body>
-        <nav class="navbar navbar-light bg-light">
+    <body class="index-body">
+        <nav class="navbar navbar-light">
             <h1 class="title-header">Pokemon</h1>
 
             <a class="add-pokemon" href="/pokemon/new">
                 Add Pokemon
             </a>
 
-            <!-- <button type="button" data-bs-toggle="collapse" data-target="#navbarNav" class="navbar-toggler"
+        </nav>
+
+
+        <div class="container">
+            <div class="card-columns">
+                <% allPokemon.forEach(function (element,index) { %>
+                    <div class="card border-dark">
+
+                        <div class="card-body">
+                            <h4 class="card-title text-center">
+                                <%= element.name %>
+                            </h4>
+                        </div>
+                        <a href="/pokemon/<%=index%>">
+                            <img class="card-img-top" src="<%= element.img %>" alt="<%= element.name %>"
+                                style="width:100%">
+                        </a>
+                        <div class="card-body text-center edit-delete">
+
+                            <!-- <a href="/pokemon/<%=index%>/edit">Edit</a> -->
+                            <form action="/pokemon/<%=index%>/edit">
+                                <input type="submit" value="Edit">
+                            </form>
+                            <form action="/pokemon/<%=index%>?_method=DELETE" method="post">
+                                <input type="submit" value="Delete">
+                            </form>
+                        </div>
+                    </div>
+
+                    <% }) %>
+            </div>
+        </div>
+        <br>
+
+        <!-- <button type="button" data-bs-toggle="collapse" data-target="#navbarNav" class="navbar-toggler"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             </button> -->
 
-        </nav>
-        <div>
-            <a href="/pokemon/new">Create a New Pokemon</a>
-        </div>
-        <div>
+
+
+
+
+        <!-- <section id="card_effects">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <% allPokemon.forEach(function (element,index) { %>
+                            <div class="card text-center ">
+                                <div>
+                                    <h1 class="card-title">
+                                        <%= element.name %>
+                                    </h1>
+                                </div>
+
+                                <div class="card-img">
+
+                                    <a href="/pokemon/<%=index%>">
+                                        <img src="<%= element.img %>" alt="<%= element.name %>"><br />
+                                    </a>
+                                    <div class="card-body">
+
+                                        <form action="/pokemon/<%=index%>/edit">
+                                            <button class="btn btn-dark">Edit</button>
+                                        </form>
+                                        <form action="/pokemon/<%=index%>?_method=DELETE" method="post">
+                                            <button class="btn btn-dark">Delete</button>
+                                        </form>
+                                    </div>
+                                    <% }) %>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- <div>
             <% allPokemon.forEach(function (element,index) { %>
                 <a href="/pokemon/<%=index%>">
                     <img src="<%= element.img %>" alt="<%= element.name %>"><br />
@@ -31,7 +101,7 @@
                     <input type="submit" value="Delete">
                 </form>
                 <% }) %>
-        </div>
+        </div> -->
 
     </body>
 

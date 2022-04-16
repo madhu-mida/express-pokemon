@@ -13,3 +13,76 @@
     font-size: 40px;
     font-family: 'Supermercado One', cursive;
 }
+
+
+.card-img-top {
+    border-radius: 8px;
+    height:300px;
+}
+
+.card-title {
+    background-color:rgb(130, 187, 190);
+    border-radius: 6px;
+    font-size: 30px;
+    color: rgb(44, 41, 41);
+    font-family: 'Supermercado One', cursive;
+}
+
+.card {
+    margin-top: 30px;
+    padding: 20px;
+    width:250px;
+    height:550px;
+}
+
+
+.edit-delete {
+    background-color: rgb(130, 187, 190);
+    border-radius: 6px;
+    font-size: 20px;
+    font-family: 'Supermercado One', cursive;
+}
+
+.show-page {
+    background-color: black;
+}
+
+.card-show-page {
+    display: flex;
+    align-items: left;
+    width:500px;
+    margin: auto;
+}
+
+.show-content {
+    justify-content: center;
+    text-align: center;
+}
+
+.card-body-show {
+    margin-left: 80px;
+    color: white;
+    font-family: 'Supermercado One', cursive;
+}
+
+.show-page-title {
+    color: red;
+    font-family: 'Supermercado One', cursive;
+    font-size: 80px;
+}
+
+.show-page-edit {
+    margin-top: 40px;
+    font-family: 'Supermercado One', cursive;
+}
+
+.show-page-backto-index {
+    margin-top: 40px;
+    color: red;
+    text-align: center;
+}
+
+.show-page-backto-index-link {
+    color: red;
+    font-family: 'Supermercado One', cursive;
+}

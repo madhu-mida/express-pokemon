@@ -42,9 +42,21 @@ app.get("/pokemon/:id/edit", (req, res) => {
 
 // Create
 app.post("/pokemon", (req, res) => {
+
     console.log(req.body)
     req.body.type = (req.body.type).split(",")
-    pokemons.push(req.body)
+    createObjPokemon = {
+        id: (pokemons.length) + 1,
+        name: req.body.name,
+        img: req.body.img,
+        type: req.body.type,
+        stats: {
+            hp: req.body.hp,
+            attack: req.body.attack,
+            defense: req.body.defense
+        }
+    }
+    pokemons.push(createObjPokemon)
     console.log(pokemons[(pokemons.length) - 1])
     res.redirect("/pokemon")
 })

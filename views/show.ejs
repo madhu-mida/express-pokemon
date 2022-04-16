@@ -3,8 +3,48 @@
 
 <%- include("partials/head.ejs") %>
 
-    <body>
-        Name: <h3>
+    <body class="show-page">
+
+        <div class="show-content">
+
+            <h2 class="show-page-title">
+                <%= pokemon.name %>
+            </h2>
+            <div class="container">
+                <div class="card card-show-page">
+                    <img class="card-img-top" src="<%= pokemon.img %>" alt="<%= pokemon.name %>" style="width:100%">
+                    <div class="card-body card-body-show">
+                        <h4>
+                            Name: <%= pokemon.name %>
+                        </h4>
+                        <h4>
+                            Type: <%= pokemon.type %>
+                        </h4>
+                        <h4>Stats:<br />
+                            <div class="stats">
+                                HP: <%= pokemon.stats.hp %><br />
+                                    Attack: <%= pokemon.stats.attack %><br />
+                                        Defense: <%= pokemon.stats.defense %><br />
+                            </div>
+
+                        </h4>
+
+
+                    </div>
+
+                </div>
+
+                <div class="show-page-edit">
+                    <form action="/pokemon/<%=index%>/edit">
+                        <input type="submit" value="Edit">
+                    </form>
+                </div>
+
+                <div class="show-page-backto-index">
+                    <a class="show-page-backto-index-link" href="/pokemon">Back To Index Page</a>
+                </div>
+            </div>
+            <!-- Name: <h3>
             <%= pokemon.name %>
         </h3><br />
         <img src="<%= pokemon.img %>" alt="<%= pokemon.name %>"><br />
@@ -23,7 +63,7 @@
 
         <div>
             <a href="/pokemon">Back To Index Page</a>
-        </div>
+        </div> -->
     </body>
 
 </html>
