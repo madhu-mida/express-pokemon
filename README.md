@@ -2,4 +2,4 @@
 
 #### Link to Live Server
 
-https://github.com/madhu-mida/express-pokemon
+https://madhu-mida.github.io/express-pokemon/
