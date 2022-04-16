@@ -94,3 +94,37 @@
     color: red;
     font-family: 'Supermercado One', cursive;
 }
+
+.body-new-page {
+    margin-top: 20px;
+    background-color:aliceblue;
+}
+
+.new-page-title {
+    font-family: 'Supermercado One', cursive;
+}
+
+.form-new {
+    margin-top: 40px;
+}
+
+.body-edit-page {
+    margin-top: 20px;
+    background-color:aliceblue;
+}
+
+.edit-page-title {
+    font-family: 'Supermercado One', cursive;
+}
+
+.form-edit {
+    margin-top: 40px;
+}
+
+.new-edit-container {
+    margin-left: 40px;
+}
+
+.cancel-button {
+    margin-top: 20px;
+}

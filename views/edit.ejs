@@ -2,8 +2,63 @@
 <html lang="en">
 <%- include("partials/head.ejs") %>
 
-    <body>
-        <h1>
+    <body class="body-edit-page">
+
+        <div class="container new-edit-container">
+            <h2 class="edit-page-title">
+                <%=pokemon.name%>
+            </h2>
+            <div class="form-edit">
+                <form action="/pokemon/<%=index%>?_method=PUT" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" value="<%=pokemon.name%>" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">ImageURL:</label>
+                        <input type="text" name="image" value="<%=pokemon.img%>" placeholder="Enter Image URL">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type:</label>
+                        <input type="text" name="type" value="<%=pokemon.type.join(" ,")%>" placeholder="Enter Type">
+                        <i>Enter multiple types separated by ","</i>
+                    </div>
+                    <div class="form-group">
+                        <label for="stats">Stats:</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="hp">HP:</label>
+                        <input type="text" name="hp" value="<%=pokemon.stats.hp%>" placeholder="Enter HP">
+                    </div>
+                    <div class="form-group">
+                        <label for="attack">Attack:</label>
+                        <input type="text" name="attack" value="<%=pokemon.stats.attack%>" placeholder="Enter Attack">
+                    </div>
+                    <div class="form-group">
+                        <label for="defense">Defense:</label>
+                        <input type="text" name="defense" value="<%=pokemon.stats.defense%>"
+                            placeholder="Enter Defense">
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Update <%=pokemon.name%>">
+
+                </form>
+                <form action="/pokemon">
+                    <input type="submit" class="btn btn-primary cancel-button" value="Cancel">
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <h1>
             <%=pokemon.name%>
         </h1>
         <form action="/pokemon/<%=index%>?_method=PUT" method="post">
@@ -21,7 +76,7 @@
             <div>
                 <input type="submit" value="Update <%=pokemon.name%>">
             </div>
-        </form>
+        </form> -->
     </body>
 
 </html>
