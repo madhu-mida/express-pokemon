@@ -17,10 +17,14 @@
 
 .card-img-top {
     border-radius: 8px;
+    
+}
+
+.index-card-img {
     height:300px;
 }
 
-.card-title {
+.pokemon-card-title {
     background-color:rgb(130, 187, 190);
     border-radius: 6px;
     font-size: 30px;
@@ -28,12 +32,14 @@
     font-family: 'Supermercado One', cursive;
 }
 
-.card {
+.index-card {
     margin-top: 30px;
     padding: 20px;
     width:250px;
     height:550px;
 }
+
+
 
 
 .edit-delete {
@@ -48,10 +54,12 @@
 }
 
 .card-show-page {
-    display: flex;
-    align-items: left;
+    /* display: flex; */
+    /* align-items: left; */
     width:500px;
     margin: auto;
+    text-align: center;
+    justify-content: center;
 }
 
 .show-content {
@@ -60,8 +68,8 @@
 }
 
 .card-body-show {
-    margin-left: 80px;
-    color: white;
+    /* margin-left: 80px; */
+    /* color: white; */
     font-family: 'Supermercado One', cursive;
 }
 
@@ -72,12 +80,12 @@
 }
 
 .show-page-edit {
-    margin-top: 40px;
+    margin-top: 30px;
     font-family: 'Supermercado One', cursive;
 }
 
 .show-page-backto-index {
-    margin-top: 40px;
+    margin-top: 20px;
     color: red;
     text-align: center;
 }

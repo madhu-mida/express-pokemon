@@ -12,7 +12,7 @@
             </h2>
             <div class="container">
                 <div class="card card-show-page">
-                    <img class="card-img-top" src="<%= pokemon.img %>" alt="<%= pokemon.name %>" style="width:100%">
+                    <img class="card-img-top" src="<%= pokemon.img %>" alt="<%= pokemon.name %>" style="width:100%" />
                     <div class="card-body card-body-show">
                         <h4>
                             Name: <%= pokemon.name %>
@@ -56,11 +56,9 @@
                 Attack: <%= pokemon.stats.attack %><br />
                     Defense: <%= pokemon.stats.defense %><br />
         </h4>
-
         <form action="/pokemon/<%=index%>/edit">
             <input type="submit" value="Edit">
         </form>
-
         <div>
             <a href="/pokemon">Back To Index Page</a>
         </div> -->

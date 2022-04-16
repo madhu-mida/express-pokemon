@@ -17,15 +17,15 @@
         <div class="container">
             <div class="card-columns">
                 <% allPokemon.forEach(function (element,index) { %>
-                    <div class="card border-dark">
+                    <div class="card border-dark index-card">
 
                         <div class="card-body">
-                            <h4 class="card-title text-center">
+                            <h4 class="card-title text-center pokemon-card-title">
                                 <%= element.name %>
                             </h4>
                         </div>
                         <a href="/pokemon/<%=index%>">
-                            <img class="card-img-top" src="<%= element.img %>" alt="<%= element.name %>"
+                            <img class="card-img-top index-card-img" src="<%= element.img %>" alt="<%= element.name %>"
                                 style="width:100%">
                         </a>
                         <div class="card-body text-center edit-delete">
